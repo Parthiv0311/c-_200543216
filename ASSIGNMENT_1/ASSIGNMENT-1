@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath> // For the log function
+
+int main() {
+    double R, T, deltaG;
+    const double lnK = -6.45;
+
+    // For the user to enter the value of R
+    std::cout << "Enter the value of R: ";
+    std::cin >> R;
+
+    // For the user to enter the value of T in Celsius
+    std::cout << "Enter the value of T in Celsius: ";
+    std::cin >> T;
+
+    // Converting the temperature to Kelvin
+    T += 273.15;
+
+    // Calculating the Gibbs free energy
+    deltaG = -R * T * lnK;
+
+    // Output of the result
+    std::cout << "The Gibbs free energy is: " << deltaG << std::endl;
+
+    return 0;
+}
